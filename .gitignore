@@ -1,0 +1,140 @@
+syntax: glob
+
+# Ignore all temporary files
+*.tmp
+
+# Ignore the "build" directory and its contents
+build/
+
+# Ignore any file ending in "~" (backup files)
+*.*~
+
+# Ignore all files inside the "logs" directory, but not the directory itself
+logs/**
+
+# Personal files: Ignore your IDE-specific configuration files, cache directories, and temporary files
+.vscode/
+.idea/
+
+
+### Windows ###
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+### Linux ###
+
+*~
+
+# KDE directory preferences
+.directory
+
+
+### OSX ###
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# vim temporary files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+
+# Visual Studio Code
+.vscode/
+.vscode-test/
+
+# Private test configuration and binaries.
+config.ps1
+**/IISApplications
+
+# Python Compile Outputs
+*.pyc
+
+# Rider
+.idea/
+
+# VSCode extension outputs
+dist/
+out/
+
+# Test generated
+src/Razor/test/OutOfWorkspaceFile.razor
+
+# Benchmark generated
+src/Razor/benchmarks/Microsoft.AspNetCore.Razor.Microbenchmarks/BenchmarkDotNet.Artifacts/results/*
+src/Razor/benchmarks/Microsoft.AspNetCore.Razor.Microbenchmarks/BenchmarkDotNet.Artifacts/*Benchmark.log
+
+*.svclog
+
+# Bundled extension assets
+*.vsix
+
+# testapp modifications
+src/Razor/test/testapps/ComponentApp/Components/Pages/Generated.razor
+
+
+### General ###
+
+# Local database connections: Ignore sensitive connection strings or configuration files for local databases
+appsettings.Development.json
+
+# Generated Files: These folders contain compiled files and temporary artifacts created during the build process. They are automatically generated based on your source code and configuration, so there's no need to version control them.
+/bin/
+/obj/
+
+# Temporary build outputs
+**/TempBin/
+**/TemporaryCache/
+
+# NuGet packages and third-party libraries: Unless you're contributing directly to these dependencies, ignore the downloaded NuGet packages folder
+packages/
+
+# Test results and logs: Ignore test output files, logs, and reports generated during testing
+**/TestResults/
+**/logs/
+
+# Client-side build outputs: If using Blazor WASM, you might have a client-side build output directory that can be ignore
+wwwroot/dist/
+
+# Temporary browser cache: Ignore caching directories used by the browser while running the Blazor app locally
+wwwroot/_content/DevExpress.Blazor/dist/cache
