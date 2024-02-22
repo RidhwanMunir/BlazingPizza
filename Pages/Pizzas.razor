@@ -1,0 +1,50 @@
+﻿@page "/pizzas"
+@using BlazingPizza.Data
+@inject PizzaService PizzaSvc
+
+<div class="main">
+<h1>Choose your pizza</h1>
+
+<p>We have all these delicious recipes:</p>
+
+@code {
+    private BlazingPizza.Data.Pizza[] todaysPizzas;
+    protected override async Task OnInitializedAsync()
+    {
+        todaysPizzas = await PizzaSvc.GetPizzasAsync();
+    }
+}
+
+@if (todaysPizzas == null)
+{
+    <p>We're finding out what pizzas are available today...</p>
+}
+else
+{
+    <!-- This markup will be rendered once the pizzas are loaded -->
+    <table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Pizza Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Vegetarian?</th>
+            <th scope="col">Vegan?</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pizza in todaysPizzas)
+        {
+            <tr>
+                <td>@pizza.Name</td>
+                <td>@pizza.Description</td>
+                <td>@pizza.Vegetarian</td>
+                <td>@pizza.Vegan</td>
+                <td>@pizza.Price</td>
+            </tr>
+        }
+    </tbody>
+    </table>
+}
+</div>
+
