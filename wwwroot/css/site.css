@@ -562,7 +562,8 @@ a.sign-in {
     }
 
 input[type=range] {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Non-standard version */
+    appearance: none; /* Add this standard version */
     margin: 7.1px 0;
     height: 21px;
 }
