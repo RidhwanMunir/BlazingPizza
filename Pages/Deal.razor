@@ -1,0 +1,20 @@
+@page "/deal"
+@using BlazingPizza.Pages
+@using BlazingPizza.Data
+
+<!-- ChildComponent.razor -->
+<h4>Child Component</h4>
+<p>Value from parent: @DealName</p>
+
+
+@code {
+    [CascadingParameter]
+    private string DealName { get; set; }
+}
+
+<!--
+code {
+    [CascadingParameter(Name="DealName")]
+    private string DealName { get; set; }
+}
+-->

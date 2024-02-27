@@ -1,0 +1,15 @@
+@using BlazingPizza.Pages
+@using BlazingPizza.Data
+<!-- Inject statement -->
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+@page "/pizzas-toppings"
+
+<div class="main">
+<h1>Our Latest Pizzas and Topping</h1>
+
+<!-- Examples on How Component Parameters -->
+<PizzaDetails PizzaName="Hawaiian" PizzaDescription="The one with pineapple" />
+<PizzaToppings Topping="@(new BlazingPizza.Data.PizzaTopping() { Name = "Chilli Sauce", Ingredients = "Three kinds of chilli." })" />
+</div>

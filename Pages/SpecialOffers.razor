@@ -1,0 +1,18 @@
+@page "/specialoffers"
+@using BlazingPizza.Pages
+@using BlazingPizza.Data
+
+<div class="main">
+<h1>Special Offers</h1>
+
+<h2>Deal: @DealName</h2>
+
+<CascadingValue Value="DealName">
+    <Deal />
+</CascadingValue>
+
+@code {
+    private string DealName = "Hello from parent!";
+}
+
+</div>
