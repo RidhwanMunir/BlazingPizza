@@ -13,6 +13,7 @@ bin/Release/
 **/packages/*
 
 # sqlite generated files
+*.db
 *.db-shm
 *.db-wal
 
