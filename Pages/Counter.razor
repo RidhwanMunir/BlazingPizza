@@ -1,0 +1,8 @@
+@page "/counter"
+@inherits PizzaSales
+
+<div class="main">
+  <h1>Welcome to Blazing Pizzas</h1>
+  <p>Today, we've sold this many pizzas: @SalesState.PizzasSoldToday</p>
+  <button @onclick="IncrementSalesAsync">Buy a Pizza</button>
+</div>
