@@ -1,13 +1,24 @@
 // allows the app to use the BlazingPizza service
 using BlazingPizza.Data;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting; 
+using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
+using Blazored.LocalStorage;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Register the LocalStorage service
+builder.Services.AddBlazoredLocalStorage();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 // Register the pizzas service
 builder.Services.AddSingleton<PizzaService>();
+
+// Add the AppState class
+builder.Services.AddScoped<PizzaSalesState>();
+// await builder.Build().RunAsync();
 
 // allows the app to access HTTP commands
 builder.Services.AddHttpClient();
