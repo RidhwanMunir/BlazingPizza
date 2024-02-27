@@ -12,6 +12,10 @@ bin/Release/
 # NuGet packages (usually ignored automatically)
 **/packages/*
 
+# sqlite generated files
+*.db-shm
+*.db-wal
+
 # Logs and temporary files
 *.log
 *.tmp
