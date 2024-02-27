@@ -1,8 +1,7 @@
-﻿namespace BlazingPizza.Data
+﻿namespace BlazingPizza.Data;
+
+public class PizzaTopping
 {
-    public class PizzaTopping
-    {
-        public string Name { get; set; }
-        public string Ingredients { get; set; }
-    }
+    public string Name { get; set; }
+    public string Ingredients { get; set; }
 }
