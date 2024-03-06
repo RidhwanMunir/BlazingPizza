@@ -16,7 +16,7 @@ public class SpecialsController : Controller
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<PizzaSpecial>>> GetSpecials()
+    public async Task<ActionResult<List<BlazingPizza.Data.PizzaSpecial>>> GetSpecials()
     {
         return (await _db.Specials.ToListAsync()).OrderByDescending(s => s.BasePrice).ToList();
     }
