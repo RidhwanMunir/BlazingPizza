@@ -1,0 +1,16 @@
+<!-- use url: http://www.contoso.com/favoritepizza/margherita -->
+@page "/FavoritePizzas/{favorite?}"
+
+<h1>Choose a Pizza</h1>
+
+<p>Your favorite pizza is: @Favorite</p>
+
+@code {
+	[Parameter]
+	public string Favorite { get; set; }
+	
+	protected override void OnInitialized()
+	{
+		Favorite ??= "Fiorentina";
+	}
+}
