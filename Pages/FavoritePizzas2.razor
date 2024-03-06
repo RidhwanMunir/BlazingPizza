@@ -1,0 +1,11 @@
+<!-- use url: http://www.contoso.com/FavouritePizzas2/2 -->
+@page "/FavoritePizzas2/{PreferredSize:int}"
+
+<h1>Choose a Pizza</h1>
+
+<p>Your favorite pizza size is: @PreferredSize inches.</p>
+
+@code {
+	[Parameter]
+	public int PreferredSize { get; set; }
+}
