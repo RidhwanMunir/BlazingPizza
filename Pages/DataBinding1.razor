@@ -1,0 +1,10 @@
+@page "/data-binding-1"
+
+<p>
+    Your email address is:
+    <input @bind="customerEmail" />
+</p>
+
+@code {
+    private string customerEmail = "john.doe@contoso.com";
+}
