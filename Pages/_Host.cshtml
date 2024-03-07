@@ -15,7 +15,11 @@
 </head>
 <body>
 
-    <component type="typeof(App)" render-mode="ServerPrerendered" />
+    <div id="app">
+      <div class="content">
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+      </div>
+    </div>
 
     <div id="blazor-error-ui">
         <environment include="Staging,Production">
